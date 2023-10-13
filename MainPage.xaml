@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<FlyoutPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FirstPlayerMobileApp.MainPage"
+             Title="Pop_upSidebar">
+    <!--Всплывающие окно-->
+    <FlyoutPage.Flyout>
+        <ContentPage Title="Pop-up sidebar" Background="#7F7F7F">
+        </ContentPage>
+    </FlyoutPage.Flyout>
+    <!--Основная часть страницы-->
+    <FlyoutPage.Detail>
+        <ContentPage Background="#5E5E5E">
+            <ScrollView>
+                <VerticalStackLayout>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="60"/>
+                            <RowDefinition Height="60"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <ListView>
+                            <ListView.Header>
+                                <Grid Background="#000000" HeightRequest="60" Margin="10"/>
+                            </ListView.Header>
+                        </ListView>
+                        <Picker Title="Все посты" Grid.Row="1" HeightRequest="40" FontSize="20"  Margin="10" TextColor="#FFF" Background="#7F7F7F">
+                            <Picker.Items>
+                                <x:String>C#</x:String>
+                                <x:String>JavaScript</x:String>
+                                <x:String>Java</x:String>
+                            </Picker.Items>
+                        </Picker>
+                        <Frame Grid.Row="2" Background="#7F7F7F" HeightRequest="500" CornerRadius="15" Margin="10">
+                            <Grid>
+                            </Grid>
+                        </Frame>
+                    </Grid>
+                </VerticalStackLayout>
+            </ScrollView>
+        </ContentPage>
+    </FlyoutPage.Detail>
+</FlyoutPage>
