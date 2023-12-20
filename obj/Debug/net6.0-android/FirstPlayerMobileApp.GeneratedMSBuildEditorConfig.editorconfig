@@ -22,11 +22,41 @@ build_metadata.AdditionalFiles.ManifestResourceName = FirstPlayerMobileApp.AppSh
 build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
 build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
 
-[C:/FirstPlayerMobileApp/MainPage.xaml]
+[C:/FirstPlayerMobileApp/MVVM/View/CommentPostPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = FirstPlayerMobileApp.MainPage.xaml
-build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
-build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = FirstPlayerMobileApp.MVVM.View.CommentPostPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MVVM\View\CommentPostPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MVVM\View\CommentPostPage.xaml
+
+[C:/FirstPlayerMobileApp/MVVM/View/LoginAndRegistrationPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = FirstPlayerMobileApp.MVVM.View.LoginAndRegistrationPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MVVM\View\LoginAndRegistrationPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MVVM\View\LoginAndRegistrationPage.xaml
+
+[C:/FirstPlayerMobileApp/MVVM/View/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = FirstPlayerMobileApp.MVVM.View.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MVVM\View\MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MVVM\View\MainPage.xaml
+
+[C:/FirstPlayerMobileApp/MVVM/View/PostCreationPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = FirstPlayerMobileApp.MVVM.View.PostCreationPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MVVM\View\PostCreationPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MVVM\View\PostCreationPage.xaml
+
+[C:/FirstPlayerMobileApp/MVVM/View/ProfilePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = FirstPlayerMobileApp.MVVM.View.ProfilePage.xaml
+build_metadata.AdditionalFiles.TargetPath = MVVM\View\ProfilePage.xaml
+build_metadata.AdditionalFiles.RelativePath = MVVM\View\ProfilePage.xaml
+
+[C:/FirstPlayerMobileApp/MVVM/View/ProjectAuthorsPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = FirstPlayerMobileApp.MVVM.View.ProjectAuthorsPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MVVM\View\ProjectAuthorsPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MVVM\View\ProjectAuthorsPage.xaml
 
 [C:/FirstPlayerMobileApp/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
@@ -39,3 +69,21 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FirstPlayerMobileApp.Resources.Styles.Styles.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[C:/FirstPlayerMobileApp/Templates/HeaderTemplate.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = FirstPlayerMobileApp.Templates.HeaderTemplate.xaml
+build_metadata.AdditionalFiles.TargetPath = Templates\HeaderTemplate.xaml
+build_metadata.AdditionalFiles.RelativePath = Templates\HeaderTemplate.xaml
+
+[C:/FirstPlayerMobileApp/Templates/PostTemplate.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = FirstPlayerMobileApp.Templates.PostTemplate.xaml
+build_metadata.AdditionalFiles.TargetPath = Templates\PostTemplate.xaml
+build_metadata.AdditionalFiles.RelativePath = Templates\PostTemplate.xaml
+
+[C:/FirstPlayerMobileApp/Templates/SidebarTemplate.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = FirstPlayerMobileApp.Templates.SidebarTemplate.xaml
+build_metadata.AdditionalFiles.TargetPath = Templates\SidebarTemplate.xaml
+build_metadata.AdditionalFiles.RelativePath = Templates\SidebarTemplate.xaml

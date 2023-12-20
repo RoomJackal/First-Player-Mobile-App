@@ -39,7 +39,6 @@
 
 		<!-- Images -->
 		<MauiImage Include="Resources\Images\*" />
-		<MauiImage Update="Resources\Images\dotnet_bot.svg" BaseSize="168,208" />
 
 		<!-- Custom Fonts -->
 		<MauiFont Include="Resources\Fonts\*" />
@@ -49,15 +48,83 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="MainPage.xaml.cs">
+	  <None Remove="Resources\Images\CommentButton.svg" />
+	  <None Remove="Resources\Images\DislikeButton.svg" />
+	  <None Remove="Resources\Images\LikeButton.svg" />
+	  <None Remove="Resources\Images\NumberViewsButton.svg" />
+	  <None Remove="Resources\Images\RepostButton.svg" />
+	  <None Remove="Resources\Images\SearchButton.svg" />
+	  <None Remove="Resources\Images\SettingsButton.svg" />
+	  <None Remove="Resources\Images\setting_button.svg" />
+	  <None Remove="Resources\Images\Test\profile_image.jpg" />
+	  <None Remove="Resources\Images\Test\test.jpg" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiImage Include="Resources\Images\Test\profile_image.jpg" />
+	  <MauiImage Include="Resources\Images\Test\test.jpg" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="MVVM\View\MainPage.xaml.cs">
 	    <DependentUpon>MainPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="MVVM\View\ProfilePage.xaml.cs">
+	    <DependentUpon>ProfilePage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="MVVM\View\ProjectAuthorsPage.xaml.cs">
+	    <DependentUpon>ProjectAuthorsPage.xaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="MainPage.xaml">
+	  <MauiXaml Update="MVVM\View\LoginAndRegistrationPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="MVVM\View\CommentPostPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="MVVM\View\PostCreationPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Templates\SidebarTemplate.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Templates\HeaderTemplate.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Templates\PostTemplate.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="MVVM\View\MainPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="MVVM\View\ProfilePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="MVVM\View\ProjectAuthorsPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiImage Include="Resources\Images\MainPageImages\comment_button.svg" />
+	  <MauiImage Include="Resources\Images\MainPageImages\dislike_button.svg" />
+	  <MauiImage Include="Resources\Images\MainPageImages\like_button.svg" />
+	  <MauiImage Include="Resources\Images\MainPageImages\logo_button.svg" />
+	  <MauiImage Include="Resources\Images\MainPageImages\number_views_button.svg" />
+	  <MauiImage Include="Resources\Images\MainPageImages\repost_button.svg" />
+	  <MauiImage Include="Resources\Images\MainPageImages\search_button.svg" />
+	  <MauiImage Include="Resources\Images\MainPageImages\setting_button.svg" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="Google.Apis.Core" Version="1.63.0" />
+	  <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
+	  <PackageReference Include="SkiaSharp" Version="2.88.6" />
+	  <PackageReference Include="System.Net.Http" Version="4.3.4" />
+	</ItemGroup>
+
+	<ProjectExtensions><VisualStudio><UserProperties XamarinHotReloadGenericExceptionInfoBarFirstPlayerMobileAppHideInfoBar="True" /></VisualStudio></ProjectExtensions>
 
 </Project>

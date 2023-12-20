@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FirstPlayerMobileApp.HeaderTemplate"
+             xmlns:local="clr-namespace:FirstPlayerMobileApp">
+    <ContentView.Content>
+        <Grid Background="#000000">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <ImageButton Clicked="GoToTheProfileButton" Grid.Column="0" Source="logo_button.png" HeightRequest="30" Background="#000000" Margin="0,0,20,0"/>
+            <VerticalStackLayout Grid.Column="1">
+                <Button Clicked="GoToTheMainPageButton" Text="Посты" TextColor="#FFF" FontSize="14" FontAttributes="Bold" Background="#000000"/>
+                <BoxView HeightRequest="1" Color="#FFF"/>
+            </VerticalStackLayout>
+            <ImageButton Grid.Column="2" Clicked="GoToTheLoginAndRegistrationPageButton" Source="setting_button.png" HeightRequest="30" Background="#000000" HorizontalOptions="End"/>
+        </Grid>
+    </ContentView.Content>
+</ContentView>

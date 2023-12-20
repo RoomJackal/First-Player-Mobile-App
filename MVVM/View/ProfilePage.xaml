@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<FlyoutPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FirstPlayerMobileApp.ProfilePage"
+             xmlns:local="clr-namespace:FirstPlayerMobileApp">
+    <FlyoutPage.Resources>
+        <ResourceDictionary>
+            <local:ByteArrayToImageConverter x:Key="ByteArrayToImageConverter" />
+        </ResourceDictionary>
+    </FlyoutPage.Resources>
+    <!--Основная часть страницы-->
+    <FlyoutPage.Flyout>
+        <ContentPage Title="Всплывающее окно"  Background="#5E5E5E">
+            <!--Подключение сайдбара с файла SidebarTemplate-->
+            <local:SidebarTemplate/>
+        </ContentPage>
+    </FlyoutPage.Flyout>
+    <!--Основная часть страницы-->
+    <FlyoutPage.Detail>
+        <ContentPage Background="#5E5E5E">
+            <ScrollView>
+                <StackLayout>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <!--Подключение заголовка с файла HeaderTemplate-->
+                    <StackLayout Grid.Row="0">
+                        <local:HeaderTemplate/>
+                    </StackLayout>
+                    <Frame Background="#7F7F7F" CornerRadius="15" HeightRequest="175" Grid.Row="1">
+                        <StackLayout>
+                            <HorizontalStackLayout>
+                                <Border Stroke="Gray" HeightRequest="75" WidthRequest="75" Margin="0,0,10,0">
+                                    <Border.StrokeShape>
+                                        <RoundRectangle CornerRadius="190"/>
+                                    </Border.StrokeShape>
+                                        <Image Source="{Binding UserModel.Usersimagepath, Converter={StaticResource ByteArrayToImageConverter}}" Aspect="Fill" HeightRequest="75" WidthRequest="75"/>
+                                </Border>
+                                    <Label Text="{Binding UserModel.nickname}" FontSize="24" FontAttributes="Bold" TextColor="#FFF"/>
+                                    <Label Text="{Binding UserModel.createtime}" FontSize="16" TextColor="#FFF" Margin="10,7,0,0"/>
+                                </HorizontalStackLayout>
+                            <StackLayout Margin="0,25,0,0" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                                <Button Text="Редактировать" Clicked="ShowEditProfileButton" TextColor="#FFF" FontSize="14" FontAttributes="Bold" Background="#5D5D5D" Margin="1.25,0,2.5,0" HorizontalOptions="FillAndExpand"/>
+                                <Button Text="Выйти" Clicked="OnClearDataClickedButton"  TextColor="#FFF" FontSize="14" FontAttributes="Bold" Background="#5D5D5D" HorizontalOptions="FillAndExpand"/>
+                            </StackLayout>
+                        </StackLayout>
+                        </Frame>
+                    <!--Редактирование профиля-->
+                    <VerticalStackLayout Grid.Row="2" Margin="0,10" x:Name="EditProfile" IsVisible="False">
+                        <Frame Background="#7F7F7F" CornerRadius="15">
+                            <VerticalStackLayout>
+                                <Border Stroke="Gray" HeightRequest="100" WidthRequest="100" Margin="0,0,10,0" Background="#5D5D5D" HorizontalOptions="Start">
+                                    <Border.StrokeShape>
+                                        <RoundRectangle CornerRadius="190"/>
+                                    </Border.StrokeShape>
+                                        <ImageButton x:Name="Profile" Background="#5D5D5D" Aspect="Fill" Clicked="SelectProfilePhotoButton"/>
+                                </Border>
+                                    <Label Text="Никнейм:" FontSize="16" FontAttributes="Bold" TextColor="#FFF"/>
+                                    <Entry Placeholder="Введите никнейм..." FontSize="16" TextColor="#FFF"  Background="#5D5D5D"/>
+                                    <Label Text="E-mail:" FontSize="16" FontAttributes="Bold" TextColor="#FFF"/>
+                                    <Entry Placeholder="Введите e-mail..." FontSize="16" TextColor="#FFF"  Background="#5D5D5D"/>
+                                    <Label Text="Пароль:" FontSize="16" FontAttributes="Bold" TextColor="#FFF"/>
+                                    <Entry Placeholder="Введите пароль..." FontSize="16" TextColor="#FFF"  Background="#5D5D5D"/>
+                                    <Button Text="Сохранить" TextColor="#FFF" FontSize="16" FontAttributes="Bold" Background="#5D5D5D" HorizontalOptions="EndAndExpand" Margin="0,10"/>
+                            </VerticalStackLayout>
+                        </Frame>
+                    </VerticalStackLayout>
+                </Grid>
+            </StackLayout>
+            </ScrollView>
+        </ContentPage>
+    </FlyoutPage.Detail>
+</FlyoutPage>

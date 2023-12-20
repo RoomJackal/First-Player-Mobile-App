@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<FlyoutPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FirstPlayerMobileApp.PostCreationPage"
+             xmlns:local="clr-namespace:FirstPlayerMobileApp">
+    <!--Всплывающие окно-->
+    <FlyoutPage.Flyout>
+        <ContentPage Title="Всплывающее окно"  Background="#5E5E5E">
+            <!--Подключение сайдбара с файла SidebarTemplate-->
+            <local:SidebarTemplate/>
+        </ContentPage>
+    </FlyoutPage.Flyout>
+    <!--Основная часть страницы-->
+    <FlyoutPage.Detail>
+        <ContentPage Background="#5E5E5E">
+            <ScrollView>
+                <VerticalStackLayout>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="40"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <StackLayout Grid.Row="0">
+                            <local:HeaderTemplate/>
+                        </StackLayout>
+                        <Frame Background="#7F7F7F" CornerRadius="15" Margin="10,15,10,0" Grid.Row="1">
+                            <VerticalStackLayout>
+                                <Label Text="Тема поста" FontSize="16" FontAttributes="Bold" TextColor="#FFF"/>
+                                <Entry Placeholder="Введите тему поста..." Text="{Binding PostModel.posts.topic}" FontSize="16" TextColor="#FFF" Background="#5D5D5D" Margin="0,0,0,10"/>
+                                <Label Text="Тектс поста" FontSize="16" FontAttributes="Bold" TextColor="#FFF"/>
+                                <Entry Placeholder="Введите текст поста..." Text="{Binding PostModel.posts.posttext}" FontSize="16" TextColor="#FFF" Background="#5D5D5D" HeightRequest="100" Margin="0,0,0,10"/>
+                                <Label Text="Теги поста" FontSize="16" FontAttributes="Bold" TextColor="#FFF"/>
+                                <Entry Placeholder="Введите теги поста..." Text="{Binding PostModel.posts.postteg}" FontSize="16" TextColor="#FFF" Background="#5D5D5D"/>
+                                <Button Text="Выбрать фотографию..." TextColor="#FFF" Background="#7F7F7F" FontSize="16" HorizontalOptions="StartAndExpand" Clicked="SelectPhotoButton"/>
+                                <Image x:Name="SelectedPhoto" Source="{Binding PostModel.posts.imgpost}" Aspect="Fill" MaximumHeightRequest="600" Margin="0,0,0,30"/>
+                                <Button Text="Опубликовать" Command="{Binding PublishCommand}" TextColor="#FFF" FontSize="16" FontAttributes="Bold" Background="#5D5D5D" HorizontalOptions="EndAndExpand"/>
+                            </VerticalStackLayout>
+                        </Frame>
+                    </Grid>
+                </VerticalStackLayout>
+            </ScrollView>
+        </ContentPage>
+    </FlyoutPage.Detail>
+</FlyoutPage>

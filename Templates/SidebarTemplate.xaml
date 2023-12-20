@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FirstPlayerMobileApp.SidebarTemplate"
+             xmlns:local="clr-namespace:FirstPlayerMobileApp">
+    <ContentView.Resources>
+        <x:Array x:Key="sidebar" Type="{x:Type local:SidebarResources}">
+            <local:SidebarResources Sidebar="Dark Souls III"/>
+            <local:SidebarResources Sidebar="Dark Souls II"/>
+            <local:SidebarResources Sidebar="Dark Souls I"/>
+        </x:Array>
+    </ContentView.Resources>
+    <ContentView.Content>
+        <StackLayout>
+            <Frame Background="#7F7F7F" CornerRadius="15">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <StackLayout>
+                        <VerticalStackLayout Grid.Row="0">
+                            <Label Text="Топ темы:" FontSize="24" TextColor="#000000" FontAttributes="Bold" Margin="0,0,0,15"/>
+                            <BoxView HeightRequest="1" Color="#5E5E5E"/>
+                        </VerticalStackLayout>
+                        <VerticalStackLayout Grid.Row="1">
+                            <ListView ItemsSource="{StaticResource sidebar}" SelectionMode="None" HasUnevenRows="True" VerticalScrollBarVisibility="Never">
+                                <ListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <ViewCell>
+                                            <VerticalStackLayout>
+                                                <Label Text="{Binding Sidebar}" FontSize="16" VerticalOptions="End" FontAttributes="Bold" TextColor="#FFF" Margin="0,5,0,10"/>
+                                                <HorizontalStackLayout>
+                                                    <ImageButton Source="comment_button.png" HeightRequest="20" Background="#7F7F7F" Margin="0,0,5,10"/>
+                                                    <ImageButton Source="number_views_button.png" HeightRequest="20" Background="#7F7F7F" Margin="5,0,5,10"/>
+                                                </HorizontalStackLayout>
+                                                <BoxView HeightRequest="1" Color="#5E5E5E"/>
+                                            </VerticalStackLayout>
+                                        </ViewCell>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
+                        </VerticalStackLayout>
+                    </StackLayout>
+                </Grid>
+            </Frame>
+            <VerticalStackLayout>
+                <Button Grid.Row="2" Clicked="GoToThePostCreationPageButton" Text="Создать" TextColor="#FFF" FontSize="20" FontAttributes="Bold" Background="#7F7F7F"  CornerRadius="15" Margin="0,10,0,10"/>
+            </VerticalStackLayout>
+            <Frame Grid.Row="3" Background="#000000" CornerRadius="0" HeightRequest="150" VerticalOptions="EndAndExpand">
+                <VerticalStackLayout>
+                    <HorizontalStackLayout>
+                        <Button Text="Правила" TextColor="#FFF" Background="#000000" FontSize="14" HorizontalOptions="Start" FontAttributes="Bold"/>
+                        <Button Text="Cайт" TextColor="#FFF" Background="#000000" FontSize="14" HorizontalOptions="End" FontAttributes="Bold"/>
+                    </HorizontalStackLayout>
+                    <Button Text="Донат" TextColor="#FFF" Background="#000000" FontSize="14" HorizontalOptions="Start" FontAttributes="Bold"/>
+                    <Button Text="Авторы" Clicked="GoToTheAuthorsPageButton" TextColor="#FFF" Background="#000000" FontSize="14" HorizontalOptions="Start" FontAttributes="Bold"/>
+                </VerticalStackLayout>
+            </Frame>
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

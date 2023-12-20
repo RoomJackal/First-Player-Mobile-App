@@ -81,6 +81,13 @@
     <Import Project="$(NuGetPackageRoot)xamarin.android.glide.disklrucache\4.12.0.8\buildTransitive\net6.0-android31.0\Xamarin.Android.Glide.DiskLruCache.targets" Condition="Exists('$(NuGetPackageRoot)xamarin.android.glide.disklrucache\4.12.0.8\buildTransitive\net6.0-android31.0\Xamarin.Android.Glide.DiskLruCache.targets')" />
     <Import Project="$(NuGetPackageRoot)xamarin.android.glide.annotations\4.12.0.8\buildTransitive\net6.0-android31.0\Xamarin.Android.Glide.Annotations.targets" Condition="Exists('$(NuGetPackageRoot)xamarin.android.glide.annotations\4.12.0.8\buildTransitive\net6.0-android31.0\Xamarin.Android.Glide.Annotations.targets')" />
     <Import Project="$(NuGetPackageRoot)xamarin.android.glide\4.12.0.8\buildTransitive\net6.0-android31.0\Xamarin.Android.Glide.targets" Condition="Exists('$(NuGetPackageRoot)xamarin.android.glide\4.12.0.8\buildTransitive\net6.0-android31.0\Xamarin.Android.Glide.targets')" />
+    <Import Project="$(NuGetPackageRoot)skiasharp.nativeassets.android\2.88.6\buildTransitive\net6.0-android30.0\SkiaSharp.NativeAssets.Android.targets" Condition="Exists('$(NuGetPackageRoot)skiasharp.nativeassets.android\2.88.6\buildTransitive\net6.0-android30.0\SkiaSharp.NativeAssets.Android.targets')" />
+  </ImportGroup>
+  <ImportGroup Condition=" '$(TargetFramework)' == 'net6.0-ios' AND '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)skiasharp.nativeassets.ios\2.88.6\buildTransitive\net6.0-ios13.6\SkiaSharp.NativeAssets.iOS.targets" Condition="Exists('$(NuGetPackageRoot)skiasharp.nativeassets.ios\2.88.6\buildTransitive\net6.0-ios13.6\SkiaSharp.NativeAssets.iOS.targets')" />
+  </ImportGroup>
+  <ImportGroup Condition=" '$(TargetFramework)' == 'net6.0-maccatalyst' AND '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)skiasharp.nativeassets.maccatalyst\2.88.6\buildTransitive\net6.0-maccatalyst13.5\SkiaSharp.NativeAssets.MacCatalyst.targets" Condition="Exists('$(NuGetPackageRoot)skiasharp.nativeassets.maccatalyst\2.88.6\buildTransitive\net6.0-maccatalyst13.5\SkiaSharp.NativeAssets.MacCatalyst.targets')" />
   </ImportGroup>
   <ImportGroup Condition=" '$(TargetFramework)' == 'net6.0-windows10.0.19041.0' AND '$(ExcludeRestorePackageImports)' != 'true' ">
     <Import Project="C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages\microsoft.windows.sdk.buildtools\10.0.22621.756\buildTransitive\Microsoft.Windows.SDK.BuildTools.targets" Condition="Exists('C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages\microsoft.windows.sdk.buildtools\10.0.22621.756\buildTransitive\Microsoft.Windows.SDK.BuildTools.targets')" />
